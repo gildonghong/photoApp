@@ -43,7 +43,7 @@ class _MaxRunDeskTopAppState extends State<MaxRunDeskTopApp> with SingleTickerPr
           controller: controller,
           children: [
             Center(
-              child: Notice(),
+              child: NoticeList(),
             ),
             Center(
               child: Text("TWO SCREEN", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),

@@ -31,7 +31,7 @@ class NoticeList extends StatefulWidget {
 }
 
 class _NoticeListState extends State<NoticeList> {
-  final DataTableSource _data = MyData();
+  final DataTableSource _data = NoticeDataList();
   final TextEditingController  fromCtrl= TextEditingController();
   final TextEditingController  toCtrl= TextEditingController();
 
@@ -132,7 +132,7 @@ class _NoticeListState extends State<NoticeList> {
 }
 
 // The "soruce" of the table
-class MyData extends DataTableSource {
+class NoticeDataList extends DataTableSource {
   // Generate some made-up data
   final List<Map<String, dynamic>> _data = List.generate(
       200,
@@ -152,7 +152,7 @@ class MyData extends DataTableSource {
   DataRow getRow(int index) {
     return DataRow(
         onSelectChanged: (selected){
-          print("row selected");
+          //print("row selected");
         },
         cells: [
           DataCell(Text(_data[index]['id'].toString())),
